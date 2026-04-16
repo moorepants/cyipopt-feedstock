@@ -1,6 +1,6 @@
 {% set name = "cyipopt" %}
-{% set version = "1.6.1" %}
-{% set sha256 = "ae7e2d0a430687d8e89cd4e61cab9920c8941a167ed8bb442dde902570035c3f" %}
+{% set version = "1.7.0rc1" %}
+{% set sha256 = "ace71e32940d587361c7accf190c173b10269e37c6fe42b108f3337edcd0e36f" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [python_impl == 'pypy']
 
